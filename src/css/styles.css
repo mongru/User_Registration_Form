@@ -1,0 +1,728 @@
+/*
+===============================
+------> BASIC CSS RESET <------
+===============================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+=============================
+------> CUSTOM STYLES <------
+=============================
+*/
+
+body {
+    background-color: #242424;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color: rgb(32, 32, 32);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+/*
+=============================
+----------> INPUTS <---------
+=============================
+*/
+
+input::-webkit-input-placeholder,
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder {
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(32, 32, 32);
+    line-height: 1.7;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-indent: 0px;
+    -webkit-transition: text-indent 0.3s ease;
+    -o-transition: text-indent 0.3s ease;
+    transition: text-indent 0.3s ease;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder {
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(32, 32, 32);
+    line-height: 1.7;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    text-indent: 0px;
+    -webkit-transition: text-indent 0.3s ease;
+    -o-transition: text-indent 0.3s ease;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder,
+input:focus:-ms-input-placeholder,
+input:focus::-moz-placeholder,
+input:focus:-moz-placeholder {
+    color: transparent;
+    text-indent: 500px;
+    -webkit-transition: text-indent 0.3s ease;
+    -o-transition: text-indent 0.3s ease;
+    transition: text-indent 0.3s ease;
+}
+
+input:focus::placeholder,
+input:focus::-webkit-input-placeholder,
+input:focus:-ms-input-placeholder,
+input:focus::-moz-placeholder,
+input:focus:-moz-placeholder {
+    color: transparent;
+    text-indent: 500px;
+    -webkit-transition: text-indent 0.3s ease;
+    -o-transition: text-indent 0.3s ease;
+    transition: text-indent 0.3s ease;
+}
+
+/*
+=============================
+-------> BACKGROUND <--------
+=============================
+*/
+.container__background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.background__shape {
+    position: fixed;
+    top: -122px;
+    -webkit-animation: grow 10s alternate infinite;
+            animation: grow 10s alternate infinite;
+}
+
+.background__lines--top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 220px;
+    z-index: -1;
+    -webkit-animation: grow 10s alternate infinite;
+            animation: grow 10s alternate infinite;
+}
+
+.background__lines--bottom {
+    position: fixed;
+    top: 65%;
+    right: -10%;
+    -webkit-animation: grow 10s alternate infinite;
+            animation: grow 10s alternate infinite;
+}
+
+@-webkit-keyframes grow {
+    0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+}
+
+@keyframes grow {
+    0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .background__shape {
+        top: -22px;
+    }
+    .background__lines--top {
+        display: block;
+    }
+}
+
+/*
+=============================
+-------> CONTENT <--------
+=============================
+*/
+.container__wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/*
+=============================
+------> MAIN STYLES <------
+=============================
+*/
+
+/* ------> HEADER <------ */
+.header__container {
+    width: 290px;
+    margin-top: -12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.header__heading {
+    font-size: 36px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.2;
+
+}
+
+@media screen and (min-width: 801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .header__container {
+        width: 470px;
+        margin-top: -12px;
+        padding-bottom: 12px;
+        text-align: left;
+        padding-left: 60px;
+    }
+
+    .header__heading {
+        font-size: 48px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .header__container {
+        width: 470px;
+        margin-top: -42px;
+        padding-bottom: 32px;
+        margin-left: 308px;
+    }
+
+    .header__heading {
+        font-size: 48px;
+    }
+}
+
+/* ------> MAIN CONTENT <------ */
+.main__container--animation {
+    display: none;
+}
+
+.main__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* ------> ASIDE IMG BOX <------ */
+
+.main__img-box {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .main__img-box {
+        display: block;
+        width: 308px;
+        height: 552px;
+        background-color: inherit;
+        background-image: url('../img/form__bg_img__masked.jpg');
+        background-size: cover;
+        -webkit-box-shadow: 0px 20px 25px 0px rgba(32, 31, 54, 0.15);
+        box-shadow: 0px 20px 25px 0px rgba(32, 31, 54, 0.15);
+    }
+    .main__img-box:before {
+        content: ' ';
+        display: block;
+        background-image: url('../img/stripes.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: 50% 40%;
+        width: 308px;
+        height: 552px;
+    }
+}
+
+/* ------> TAB NAVIGATION <------ */
+
+.main-form__nav {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    /* big landscape tablets, laptops, and desktops */
+    .main-form__nav {
+        display: block;
+        font-size: 11px;
+        color: #555556;
+        position: absolute;
+        top: 105px;
+        right: -62px;
+    }
+    .main-form__nav span {
+        display: block;
+        line-height: 2;
+    }
+    .main-form__navlink {
+        display: block;
+        height: 85px;
+    }
+    .main-form__navlink::before {
+        content: ' ';
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #555556;
+        position: relative;
+        top: 0;
+    }
+    .main-form__navlink a {
+        text-decoration: none;
+        color: #555556;
+        display: block;
+        padding: 15px 10px;
+        font-weight: 300;
+        text-rendering: optimizeLegibility;
+    }
+
+    .main-form__navlink--active a,
+    .main-form__navlink--active a:link,
+    .main-form__navlink--active a:visited {
+        color: white;
+    }
+
+    .main-form__navlink--active a:hover {
+        color: rgb(27, 254, 192);
+        -webkit-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        transition: 0.3s linear;
+    }
+
+    .main-form__navlink--active a:active {
+        color: rgb(27, 254, 192);
+    }
+
+    .main-form__navlink--active::before {
+        background-color: rgb(27, 254, 192);
+    }
+}
+
+/*
+==========================
+------> MAIN FORM <------
+==========================
+*/
+
+.main-form {
+    height: 512px;
+}
+
+@media screen and (min-width: 600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .main-form {
+        height: 552px;
+    }
+}
+
+/*
+==========================================
+------> MAIN FORM PERSONAL SECTION <------
+==========================================
+*/
+
+.main-form--personal {
+    width: calc(100% - 24px);
+    max-width: 470px;
+    margin: 0 auto;
+    height: 512px;
+    height: inherit;
+    padding: 30px 15px 80px 15px;
+    background-color: white;
+    position: relative;
+}
+
+.main-form--personal:before {
+    content: ' ';
+    background-color: rgb(27, 254, 192);
+    position: absolute;
+    left: 50px 60px;
+    top: -2px;
+    width: 70px;
+    height: 2px;
+    z-index: 86;
+}
+
+.main-form__description {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(32, 32, 32);
+    line-height: 1.7;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    padding-left: 10px;
+    padding-bottom: 0;
+}
+
+.main-form__label {
+    font-size: 11px;
+    color: rgb(223, 223, 228);
+    line-height: 2.5;
+    text-align: left;
+    display: block;
+    padding-left: 11px;
+}
+
+.main-form__fieldset {
+    border: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.main-form-fieldeset__wrapper {
+    display: block;
+    max-width: 100%;
+}
+
+.main-form__input, .main-form__select {
+    padding: 0 0 11px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(32, 32, 32, 0.902);
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(223, 223, 228);
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 10px;
+    line-height: 1.75;
+}
+
+.main-form__input--mobile {
+    min-width: 50px;
+    max-width: 60px;
+}
+
+@media screen and (min-width: 600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .main-form--personal {
+        width: 470px;
+        height: 552px;
+        padding: 46px 56px 75px 56px;
+    }
+
+    .main-form__description {
+        padding-bottom: 35px;
+    }
+}
+
+/* ------> FORM INPUT FIELDS <------ */
+.main-form__input#name {
+    width: 100%;
+}
+
+.main-form__input#mobile-number {
+    max-width: 40%;
+}
+
+.main-form__input#month,
+.main-form__input#year {
+    max-width: 30%;
+}
+
+.main-form__select:focus, .main-form__input:focus {
+    outline-style: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(83, 31, 192);
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.main-form__select {
+    background: url('../img/dropdown_arrow.svg') no-repeat 87% 32%;
+    border-bottom: none;
+    padding: 0;
+    margin-right: 14px;
+}
+
+.main-form__select select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 0 0 15px 10px;
+    border-radius: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    min-width: 100px;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-bottom: 2px solid rgb(223, 223, 228);
+    text-transform: uppercase;
+}
+
+.main-form__select select:focus {
+    outline-style: none;
+    border-bottom: 2px solid rgb(83, 31, 192);
+}
+
+.main-form__radio-box {
+    margin: 5px 0 8px 0;
+}
+
+.main-form__radio {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.main-form__radio+.main-form__label--gender {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid rgb(223, 223, 228);
+}
+
+.main-form__label--gender:last-child {
+    margin-left: 30px;
+}
+
+.main-form__radio+.main-form__label--gender::after {
+    content: " ";
+    border: 2px solid rgb(223, 223, 228);
+    width: 15px;
+    height: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 85%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.main-form__radio:checked+.main-form__label--gender,
+.main-form__radio:checked+.main-form__label--gender::after {
+    border: 2px solid rgb(27, 254, 192);
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.main-form__radio:checked+.main-form__label--gender::before {
+    content: ' ';
+    background-color: rgb(27, 254, 192);
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 21px;
+    right: -2px;
+    z-index: 9999;
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.main-form__icon {
+    font-size: 22px;
+}
+
+.main-form__dateOfBirth-box {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0 8px 0;
+}
+
+.main-form--dateOfBirth {
+    border: 2px solid rgb(223, 223, 228);
+    padding: 10px;
+    margin: 0;
+    height: 50px;
+}
+
+.main-form--dateOfBirth:focus {
+    outline-style: none;
+    border-radius: 0;
+    border: 2px solid rgb(83, 31, 192);
+}
+
+#day {
+    min-width: 50px;
+    max-width: 60px;
+}
+
+#year {
+    width: calc(100% - 175px);
+}
+
+.main-form__separator {
+    width: 10px;
+    height: 2px;
+    margin: 5px 5px;
+    background-color: rgb(223, 223, 228);
+    display: inline-block;
+}
+
+/* ------> BUTTON <------ */
+
+.main-form__btn-box {
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: -25px;
+}
+
+.main-form__btn {
+    width: 187px;
+    height: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1.2px;
+    background: -webkit-linear-gradient( 0deg, rgb(134, 88, 235) 0%, rgb(101, 42, 230) 100%);
+    background: -ms-linear-gradient( 0deg, rgb(134, 88, 235) 0%, rgb(101, 42, 230) 100%);
+    -webkit-box-shadow: 0px 20px 25px 0px rgba(32, 31, 54, 0.15);
+    box-shadow: 0px 20px 25px 0px rgba(32, 31, 54, 0.15);
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+    line-height: 2.3;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    border: none;
+    position: relative;
+    margin-left: -50px;
+}
+
+.main-form__btn::before {
+    content: url('../img/btn__arrow.svg');
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(120, 65, 244);
+    -webkit-box-shadow: 0px 23px 24px 0px rgba(13, 13, 31, 0.08);
+    box-shadow: 0px 23px 24px 0px rgba(13, 13, 31, 0.08);
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+.main-form__btn:hover::before {
+    background-color: rgb(27, 254, 192);
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+@media screen and (min-width: 600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .main-form__btn-box {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
+/*
+==============================
+------> USER MESSAGE STYLES <------
+==============================
+*/
+.error {
+    color: red;
+    font-size: 10px;
+}
+
+.invalid {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid red;
+    background-color: transparent;
+}
+
+.warning__box {
+    width: 200px;
+    height: 12px;
+}
+
+.success-message__box {
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    padding: 20px;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    font-size: 3vh;
+    font-weight: 300;
+    color: rgb(27, 254, 192);
+    background-color: rgba(13, 13, 31, 0.9);
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}

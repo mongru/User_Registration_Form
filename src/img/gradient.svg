@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="674" height="663" viewBox="36 3 674 663">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-1);
+        filter: url(#drop-shadow-1);
+        fill-rule: evenodd;
+      }
+    </style>
+
+    <linearGradient id="linear-gradient-1" gradientUnits="userSpaceOnUse" x1="24" y1="312.172" x2="684.844" y2="312.172">
+      <stop offset="0" stop-color="#8658eb"/>
+      <stop offset="1" stop-color="#652ae6"/>
+    </linearGradient>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="dropBlur"/>
+      <feFlood flood-color="#201f36" flood-opacity="0.05"/>
+      <feComposite operator="in" in2="dropBlur" result="dropShadowComp"/>
+      <feComposite in="SourceGraphic" result="shadowed"/>
+    </filter>
+  </defs>
+  <path d="M36.578,24.828 L302.578,24.828 C302.578,24.828 346.170,100.213 462.578,116.828 C550.420,129.365 596.054,129.878 670.578,178.828 C765.140,273.391 379.143,632.438 333.578,639.828 C144.394,670.511 270.348,157.862 24.578,266.828 " class="cls-1"/>
+</svg>
