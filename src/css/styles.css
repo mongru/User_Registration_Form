@@ -99,7 +99,7 @@ input:focus:-moz-placeholder {
 */
 .container__background {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     z-index: -1;
 }
@@ -169,6 +169,8 @@ input:focus:-moz-placeholder {
 
 .container__maincontent {
     height: 100vh;
+    margin: 10% 0;
+    padding: 48px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -207,10 +209,7 @@ input:focus:-moz-placeholder {
 /* ------> HEADER <------ */
 .header__container {
     width: 290px;
-    /* padding-top: 10%; */
-    /* margin-top: -12px; */
-    padding-bottom: 12px;
-    padding-left: 20px;
+    padding: 48px 0 12px 20px;
     text-align: left;
 }
 
