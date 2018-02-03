@@ -168,9 +168,8 @@ input:focus:-moz-placeholder {
 */
 
 .container__maincontent {
-    height: 100vh;
-    margin: 10% 0;
-    padding: 48px 0;
+    /* height: 100vh; */
+    margin: 6% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -209,7 +208,7 @@ input:focus:-moz-placeholder {
 /* ------> HEADER <------ */
 .header__container {
     width: 290px;
-    padding: 48px 0 12px 20px;
+    padding: 0 0 12px 20px;
     text-align: left;
 }
 
