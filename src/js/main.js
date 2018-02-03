@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearInput = document.querySelector("#year");
     const submitBtn = document.querySelector(".main-form__btn");
     const tablinks = document.querySelectorAll(".main-form__navlink a");
+    const warningMessage = "Please fill in all the fields";
     const warningBox = document.querySelector(".warning__box");
     const successMessage = document.querySelector(".success-message__box");
 
     // BLOCK ALL TABLINKS
-    let tabLength = tablinks.length;
-    for (let i=0; i<tabLength; i++) {
-        tablinks[i].addEventListener("click", e => e.preventDefault());
+    for (let tablink of tablinks) {
+        tablink.addEventListener("click", e => e.preventDefault());
     }
 
     // BLOCK SUBMIT BUTTON
@@ -92,10 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // BASIC VALIDATION OF ALL INPUTS
-    let max = allInputs.length;
-    const warningMessage = "Please fill in all the fields";
-    for(let i = 0; i<max; i++) {
-        validateInput(allInputs[i], warning, warningMessage, warningBox);
+    for (let input of allInputs) {
+        validateInput(input, warning, warningMessage, warningBox);
     }
 
     form.addEventListener("submit", (e) => {

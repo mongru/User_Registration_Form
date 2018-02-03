@@ -22,7 +22,6 @@ body {
     font-family: 'Roboto', Helvetica, sans-serif;
     color: rgb(32, 32, 32);
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 h1 {
@@ -39,7 +38,6 @@ ul, li {
 =============================
 */
 
-input::-webkit-input-placeholder,
 input::-webkit-input-placeholder,
 input:-ms-input-placeholder {
     text-overflow: ellipsis;
@@ -71,7 +69,6 @@ input:-ms-input-placeholder {
     transition: text-indent 0.3s ease;
 }
 
-input:focus::-webkit-input-placeholder,
 input:focus::-webkit-input-placeholder,
 input:focus:-ms-input-placeholder,
 input:focus::-moz-placeholder,
@@ -169,11 +166,23 @@ input:focus:-moz-placeholder {
 -------> CONTENT <--------
 =============================
 */
+
+.container__maincontent {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .container__wrapper {
     width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -198,7 +207,8 @@ input:focus:-moz-placeholder {
 /* ------> HEADER <------ */
 .header__container {
     width: 290px;
-    margin-top: -12px;
+    /* padding-top: 10%; */
+    /* margin-top: -12px; */
     padding-bottom: 12px;
     padding-left: 20px;
     text-align: left;
@@ -518,9 +528,13 @@ input:focus:-moz-placeholder {
 }
 
 .main-form__radio {
-    visibility: hidden;
-    width: 0;
-    height: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.main-form__radio:last-of-type {
+    margin-left: 30px;
 }
 
 .main-form__radio+.main-form__label--gender {
@@ -533,7 +547,7 @@ input:focus:-moz-placeholder {
     text-align: center;
     position: relative;
     cursor: pointer;
-    background: transparent;
+    background: white;
     border: 2px solid rgb(223, 223, 228);
 }
 
@@ -652,6 +666,7 @@ input:focus:-moz-placeholder {
     border: none;
     position: relative;
     margin-left: -50px;
+    cursor: pointer;
 }
 
 .main-form__btn::before {

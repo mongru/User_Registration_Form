@@ -12,191 +12,146 @@
     <link rel="shortcut icon" href="">
     <title>10Clouds - Your account form</title>
     <link rel="stylesheet" href="dist/styles.css">
-    <!--  placing script here prevents from a flash of unstyled content on load-->
+    <!--  placing script here prevents from flashing of unstyled content on load-->
     <script src="./dist/bundle.min.js"></script>
 </head>
 
 <body>
-<!-- ==========================  BACKGROUND CONTAINER ====================== -->
-    <div class="container__background">
-        <img class="background__shape animated fadeIn" src="./src/img/gradient.svg" alt="">
-        <img class="background__lines--top animated slideInDown" src="./src/img/bg__lines__top.png" alt="">
-        <img class="background__lines--bottom animated slideInUp" src="./src/img/lines.svg" alt="">
-    </div>
-<!-- ==========================  CONTENT WRAPPER  ========================== -->
-    <div class="container__wrapper">
-<!-- ===============================  HEADER  ============================== -->
-        <header>
-            <div class="header__container">
-                <h1 class="header__heading">Your account</h1>
-            </div>
-        </header>
-<!-- =================================  MAIN  ============================== -->
-        <div class="main__container--animation">
-            <main>
-                <div class="main__wrapper">
-                    <!--  IMG BOX  -->
-                    <aside>
-                        <div class="main__img-box animated slideInRight">
-                        </div>
-                    </aside>
-                    <!--  MAIN FORM SECTION  -->
-                    <form id="main-form" class="main-form" action="#">
-                        <section class="main-form--personal animated slideInLeft">
-                            <div class="main-form__container">
-                                <p class="main-form__description">
-                                    Take it all with you. Switch between devices, and&nbsp;pickup.
-                                </p>
-                                <div class="warning__box">
-                                </div>
-                                <!--  NAME INPUT  -->
-                                <fieldset class="main-form__fieldset">
-                                    <div>
-                                        <label for="name">
-                                            <span class="main-form__label">Your name</span>
-                                        </label>
-                                        <input
-                                        id="name"
-                                        class="main-form__input"
-                                        type="text"
-                                        name="username"
-                                        placeholder="Bill Elliot"
-                                        pattern="([a-zA-Z]{3,30}\s*)+ [a-zA-Z]{3,30}"
-                                        title-"Your name and last name"
-                                        autofocus=true
-                                        required>
-                                    </div>
-                                </fieldset>
-                                <!--  MOBILE INPUT  -->
-                                <fieldset class="main-form__fieldset">
-                                    <label for="mobile-prefix">
-                                        <span class="main-form__label">Mobile</span>
-                                    </label>
-                                    <div class="main-form-fieldset__wrapper">
-                                        <div class="main-form__select">
-                                            <select id="mobile-prefix" name="mobile-prefix" required title:"please select prefix">
-                                                <option value="">+00 (xx)</option>
-                                                <optgroup label="Select prefix"></optgroup>
-                                                <option value="pl" data="+48">+48 (pl)</option>
-                                                <option value="de" data="+49">+49 (de)</option>
-                                                <option value="uk" data="+44">+44 (uk)</option>
-                                            </select>
-                                        </div>
-                                        <label for="mobile-number">
-                                        </label>
-                                        <input
-                                        id="mobile-number"
-                                        class="main-form__input"
-                                        type="tel"
-                                        required
-                                        name="mobile-number"
-                                        placeholder="512 372 774"
-                                        pattern="^\d{2}(?: ?\d+)*$"
-                                        title="Your mobile number xxx xxx xxx"
-                                        >
-                                    </div>
-                                </fieldset>
-                                <!--  GENDER CHECKBOX  -->
-                                <fieldset class="main-form__fieldset">
-                                    <legend title="This field is mandatory">
-                                        <span class="main-form__label">Gender</span>
-                                    </legend>
-                                    <div class="main-form__radio-box">
-                                        <input
-                                        id="female"
-                                        class="main-form__radio"
-                                        type="radio"
-                                        name="gender"
-                                        value="female"
-                                        checked>
-                                        <label class="main-form__label--gender" for="female">
-                                            <i class="main-form__icon fa fa-venus " aria-hidden="true"></i>
-                                        </label>
-                                        <input
-                                        id="male"
-                                        class="main-form__radio"
-                                        type="radio"
-                                        name="gender"
-                                        value="male">
-                                        <label class="main-form__label--gender" for="male">
-                                            <i class="main-form__icon fa fa-mars" aria-hidden="true"></i>
-                                        </label>
-                                    </div>
-                                </fieldset>
-                                <!--  DATE INPUT  -->
-                                <fieldset class="main-form__fieldset">
-                                    <label for="date">
-                                        <span class="main-form__label">Date of Birth</span>
-                                    </label>
-                                    <div class="main-form-fieldset__wrapper">
-                                        <div class="main-form__dateOfBirth-box">
-                                            <input
-                                            id="day"
-                                            class="main-form__input main-form--dateOfBirth"
-                                            type="number"
-                                            required
-                                            name="day"
-                                            value "1"
-                                            placeholder="01"
-                                            min="1"
-                                            max="31"
-                                            step="1">
-                                            <span class="main-form__separator"></span>
-                                            <input id="month" class="main-form__input main-form--dateOfBirth" list="months" required name="months" placeholder="January">
-                                            <datalist id="months">
-                                                <option value="January">
-                                                <option value="February">
-                                                <option value="March">
-                                                <option value="April">
-                                                <option value="May">
-                                                <option value="June">
-                                                <option value="July">
-                                                <option value="August">
-                                                <option value="September">
-                                                <option value="October">
-                                                <option value="November">
-                                                <option value="December">
-                                            </datalist>
-                                            <span class="main-form__separator"></span>
-                                            <input
-                                            id="year"
-                                            class="main-form__input main-form--dateOfBirth"
-                                            type="number"
-                                            required
-                                            name="year"
-                                            placeholder="1985"
-                                            min="1918"
-                                            max="2100"
-                                            step="1">
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <!--  TAB NAVIGATION  -->
-                            <nav>
-                                <ul class="main-form__nav animated slideInLeft">
-                                    <li class="main-form__navlink">
-                                        <a href="">01</a>
-                                    </li>
-                                    <li class="main-form__navlink main-form__navlink--active">
-                                        <a href="">02<span>Personal</span></a>
-                                    </li>
-                                    <li class="main-form__navlink">
-                                        <a href="">03</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </section>
-                        <!--  BUTTON  -->
-                        <div class="main-form__btn-box">
-                            <button class="main-form__btn animated slideInLeft" type="submit" name="button">continue</button>
-                        </div>
-                    </form>
-                </div>
-            </main>
+
+    <!-- ==========================  CONTENT WRAPPER  ========================== -->
+    <div class="container__maincontent">
+        <!-- ==========================  BACKGROUND CONTAINER ====================== -->
+        <div class="container__background">
+            <img class="background__shape animated fadeIn" src="./src/img/gradient.svg" alt="">
+            <img class="background__lines--top animated slideInDown" src="./src/img/bg__lines__top.png" alt="">
+            <img class="background__lines--bottom animated slideInUp" src="./src/img/lines.svg" alt="">
         </div>
-        <div class="success-message__box">
-            Thank you! Form has been submitted.
+        <div class="container__wrapper">
+            <!-- ===============================  HEADER  ============================== -->
+            <header>
+                <div class="header__container">
+                    <h1 class="header__heading">Your account</h1>
+                </div>
+            </header>
+            <!-- =================================  MAIN  ============================== -->
+            <div class="main__container--animation">
+                <main>
+                    <div class="main__wrapper">
+                        <!--  IMG BOX  -->
+                        <aside>
+                            <div class="main__img-box animated slideInRight">
+                            </div>
+                        </aside>
+                        <!--  MAIN FORM SECTION  -->
+                        <form id="main-form" class="main-form" action="#">
+                            <section class="main-form--personal animated slideInLeft">
+                                <div class="main-form__container">
+                                    <p class="main-form__description">
+                                        Take it all with you. Switch between devices, and&nbsp;pickup.
+                                    </p>
+                                    <div class="warning__box">
+                                    </div>
+                                    <!--  NAME INPUT  -->
+                                    <fieldset class="main-form__fieldset">
+                                        <div>
+                                            <label for="name">
+                                                <span class="main-form__label">Your name</span>
+                                            </label>
+                                            <input id="name" class="main-form__input" type="text" name="username" placeholder="Bill Elliot" pattern="([a-zA-Z]{3,30}\s*)+ [a-zA-Z]{3,30}" title- "Your name and last name" autofocus=true required>
+                                        </div>
+                                    </fieldset>
+                                    <!--  MOBILE INPUT  -->
+                                    <fieldset class="main-form__fieldset">
+                                        <label for="mobile-prefix">
+                                            <span class="main-form__label">Mobile</span>
+                                        </label>
+                                        <div class="main-form-fieldset__wrapper">
+                                            <div class="main-form__select">
+                                                <select id="mobile-prefix" name="mobile-prefix" required title: "please select prefix">
+                                                    <option value="">+00 (xx)</option>
+                                                    <optgroup label="Select prefix"></optgroup>
+                                                    <option value="pl" data="+48">+48 (pl)</option>
+                                                    <option value="de" data="+49">+49 (de)</option>
+                                                    <option value="uk" data="+44">+44 (uk)</option>
+                                                </select>
+                                            </div>
+                                            <label for="mobile-number">
+                                            </label>
+                                            <input id="mobile-number" class="main-form__input" type="tel" required name="mobile-number" placeholder="512 372 774" pattern="^\d{2}(?: ?\d+)*$" title="Your mobile number xxx xxx xxx">
+                                        </div>
+                                    </fieldset>
+                                    <!--  GENDER CHECKBOX  -->
+                                    <fieldset class="main-form__fieldset">
+                                        <legend title="This field is mandatory">
+                                            <span class="main-form__label">Gender</span>
+                                        </legend>
+                                        <div class="main-form__radio-box">
+                                            <input id="female" class="main-form__radio" type="radio" name="gender" value="female" checked>
+                                            <label class="main-form__label--gender" for="female">
+                                                <i class="main-form__icon fa fa-venus " aria-hidden="true"></i>
+                                            </label>
+                                            <input id="male" class="main-form__radio" type="radio" name="gender" value="male">
+                                            <label class="main-form__label--gender" for="male">
+                                                <i class="main-form__icon fa fa-mars" aria-hidden="true"></i>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <!--  DATE INPUT  -->
+                                    <fieldset class="main-form__fieldset">
+                                        <label for="date">
+                                            <span class="main-form__label">Date of Birth</span>
+                                        </label>
+                                        <div class="main-form-fieldset__wrapper">
+                                            <div class="main-form__dateOfBirth-box">
+                                                <input id="day" class="main-form__input main-form--dateOfBirth" type="number" required name="day" value "1" placeholder="01" min="1" max="31" step="1">
+                                                <span class="main-form__separator"></span>
+                                                <input id="month" class="main-form__input main-form--dateOfBirth" list="months" required name="months" placeholder="January">
+                                                <datalist id="months">
+                                                    <option value="January">
+                                                    <option value="February">
+                                                    <option value="March">
+                                                    <option value="April">
+                                                    <option value="May">
+                                                    <option value="June">
+                                                    <option value="July">
+                                                    <option value="August">
+                                                    <option value="September">
+                                                    <option value="October">
+                                                    <option value="November">
+                                                    <option value="December">
+                                                </datalist>
+                                                <span class="main-form__separator"></span>
+                                                <input id="year" class="main-form__input main-form--dateOfBirth" type="number" required name="year" placeholder="1985" min="1918" max="2100" step="1">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <!--  TAB NAVIGATION  -->
+                                <nav>
+                                    <ul class="main-form__nav animated slideInLeft">
+                                        <li class="main-form__navlink">
+                                            <a href="">01</a>
+                                        </li>
+                                        <li class="main-form__navlink main-form__navlink--active">
+                                            <a href="">02<span>Personal</span></a>
+                                        </li>
+                                        <li class="main-form__navlink">
+                                            <a href="">03</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                            <!--  BUTTON  -->
+                            <div class="main-form__btn-box">
+                                <button class="main-form__btn animated slideInLeft" type="submit" name="button">continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </main>
+            </div>
+            <div class="success-message__box">
+                Thank you! Form has been submitted.
+            </div>
         </div>
     </div>
 </body>
