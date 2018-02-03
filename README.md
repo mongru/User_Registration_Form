@@ -1,6 +1,6 @@
 # User registration form
 (created as a part of a recruitment process).
-Click for preview [Click here for preview](https://mongru.github.io/User_Registration_Form/)
+[Click here for preview](https://mongru.github.io/User_Registration_Form/)
 
 ## Features: RWD (mobile first approach), basic user input validation with HTML5 and JavaScript.
 
@@ -17,7 +17,7 @@ development version:
 
 'npm start'
 ```
-& go to http://localhost:8080/
+& navigate to http://localhost:8080/
 
 to build a minified script run:
 ```
