@@ -1,11 +1,12 @@
 # User registration form
 (created as a part of a recruitment process).
+Click for preview [Click here for preview](https://mongru.github.io/User_Registration_Form/)
 
 ## Features: RWD (mobile first approach), basic user input validation with HTML5 and JavaScript.
 
-### Technologies used: HTML5, CSS3(flexbox), JavaScript(ES6).
+#### Technologies used: HTML5, CSS3(flexbox), JavaScript(ES6).
 
-### Tools: Webpack - for bundling build script and js/css minification.
+#### Tools: Webpack - for bundling build script and js/css minification.
 
 development version:
 ```
