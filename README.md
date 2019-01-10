@@ -1,5 +1,4 @@
 # User registration form
-(created as a part of a recruitment process).
 [Click here for preview](https://mongru.github.io/User_Registration_Form/)
 
 ## Features: RWD (mobile first approach), basic user input validation with HTML5 and JavaScript.
