@@ -9,12 +9,12 @@
 
 development version:
 ```
-'git clone https://github.com/mongru/User_Registration_Form.git
+git clone https://github.com/mongru/User_Registration_Form.git
 ```
 ```
-'npm install'
+npm install
 
-'npm start'
+npm start
 ```
 & navigate to http://localhost:8080/
 
